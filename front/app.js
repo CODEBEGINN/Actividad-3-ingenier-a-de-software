@@ -68,7 +68,7 @@ formulario.addEventListener("submit", async function (event) {
 
         const respuestaServidor =
             await fetch(
-                "http://localhost:3000/api/status",
+                "https://actividad-3-ingenier-a-de-software.onrender.com/",
 
                 {
                     method: "POST",
