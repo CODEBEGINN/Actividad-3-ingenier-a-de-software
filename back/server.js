@@ -24,7 +24,7 @@ const ContactoSchema = new mongoose.Schema({
   asunto: String,
   mensaje: String,
   fecha: { type: Date, default: Date.now }
-});
+}, { collection: 'contactos' });
 
 const Contacto = mongoose.model('Contacto', ContactoSchema);
 
