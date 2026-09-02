@@ -36,7 +36,3 @@ PORT=3000
    node api/status.js
    ```
 3. Abre el archivo `public/index.html` en tu navegador.
-# Formulario de Contacto Full Stack
-
-Aplicación web para enviar mensajes a través de un formulario y almacenarlos en una base de datos en la nube.
-
