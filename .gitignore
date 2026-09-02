@@ -1,0 +1,16 @@
+# Dependencias de Node.js (¡Esto pesa muchísimo y nunca se sube a Git!)
+node_modules/
+
+# Archivos de configuración local y credenciales secretas
+.env
+.env.local
+
+# Archivos del sistema operativo y editores
+.DS_Store
+.vscode/
+.vscodium/
+Thumbs.db
+
+# Archivos de registro de errores (logs)
+*.log
+npm-debug.log*

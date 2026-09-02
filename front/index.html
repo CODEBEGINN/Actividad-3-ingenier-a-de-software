@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Formulario Unisalle</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <h1>Formulario de Contacto</h1>
+
+        <p>
+            Envíanos tu mensaje utilizando el siguiente formulario.
+        </p>
+
+    </header>
+
+
+    <main>
+
+        <form id="formulario">
+
+            <label for="nombre">
+                Nombre
+            </label>
+
+            <input
+                type="text"
+                id="nombre"
+                placeholder="Ingresa tu nombre"
+            >
+
+
+            <label for="correo">
+                Correo electrónico
+            </label>
+
+            <input
+                type="text"
+                id="correo"
+                placeholder="ejemplo@correo.com"
+            >
+
+
+            <label for="asunto">
+                Asunto
+            </label>
+
+            <input
+                type="text"
+                id="asunto"
+                placeholder="Ingresa el asunto"
+            >
+
+
+            <label for="mensaje">
+                Mensaje
+            </label>
+
+            <textarea
+                id="mensaje"
+                placeholder="Escribe tu mensaje"
+            ></textarea>
+
+
+            <button type="submit">
+                Enviar
+            </button>
+
+        </form>
+
+
+        <p id="respuesta"></p>
+
+    </main>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
