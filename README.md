@@ -7,6 +7,7 @@ Aplicación web para enviar mensajes a través de un formulario y almacenarlos e
 * **Front-end (/public):** Interfaz de usuario estática desarrollada con HTML, CSS y JavaScript nativo. Desplegada en Vercel.
 * **Back-end (/api):** API REST estructurada con Node.js y Express que procesa las peticiones. Desplegada en Render.
 * **Base de Datos:** Clúster en la nube de MongoDB Atlas gestionado con Mongoose.
+* **Url:** https://acti-ten.vercel.app/
 
 ## Tecnologías
 
