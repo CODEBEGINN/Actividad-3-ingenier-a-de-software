@@ -68,7 +68,7 @@ formulario.addEventListener("submit", async function (event) {
 
         const respuestaServidor =
             await fetch(
-                "/api/contacto",
+                "http://localhost:3000/api/status",
 
                 {
                     method: "POST",

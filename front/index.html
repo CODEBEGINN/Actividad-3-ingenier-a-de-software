@@ -29,7 +29,7 @@
 
     <main>
 
-        <form id="formulario">
+        <form  id="formulario">
 
             <label for="nombre">
                 Nombre
@@ -37,7 +37,7 @@
 
             <input
                 type="text"
-                id="nombre"
+                 id="nombre"  required
                 placeholder="Ingresa tu nombre"
             >
 
@@ -48,7 +48,7 @@
 
             <input
                 type="text"
-                id="correo"
+                 id="correo"  required
                 placeholder="ejemplo@correo.com"
             >
 
@@ -59,7 +59,7 @@
 
             <input
                 type="text"
-                id="asunto"
+                 id="asunto"  required
                 placeholder="Ingresa el asunto"
             >
 
@@ -87,6 +87,41 @@
 
 
     <script src="app.js"></script>
+
+    <script>
+    document.getElementById('miFormulario').addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        // recolecta los datos de los campos de texto
+        const datos_del_formulario = {
+            nombre: document.getElementById('nombre').value,
+            email: document.getElementById('email').value,
+            mensaje: document.getElementById('mensaje').value
+        };
+
+        try {
+            // envia los datos al servidor backend que creamos en el puerto 3000
+            const respuesta = await fetch('http://localhost:3000/api/guardar', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(datos_del_formulario)
+            });
+
+            const resultado = await respuesta.json();
+
+            if (respuesta.ok) {
+                alert('¡Formulario enviado con éxito!');
+                document.getElementById('miFormulario').reset(); // limpia los campos
+            } else {
+                alert('Error en el servidor: ' + resultado.error);
+            }
+        } catch (error) {
+            alert('No se pudo conectar con el servidor backend. ¿Está encendido?');
+        }
+    });
+</script>
 
 </body>
 
